@@ -64,11 +64,9 @@ void insert_After(LList *L,Data x,Node *q){ //Thêm một nút vào sau một n�
 	Node *pp;
 	pp=(Node*)malloc(sizeof(Node));
 	pp->infor=x;
-	else{
-		pp->link = q->link;
-		q->link = pp;
-		if(q==L->pTail) L->pTail=pp;
-	}
+	pp->link = q->link;
+	q->link = pp;
+	if(q==L->pTail) L->pTail=pp;
 	L->spt++;
 }
 Node* timNut(LList L,int ma){
